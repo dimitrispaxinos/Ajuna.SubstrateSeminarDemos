@@ -1,8 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SubstrateNET", "SubstrateNET", "{899D3496-CE8A-40C7-973F-A7E79E021D10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstrateNET.RestService", "SubstrateNET\SubstrateNET.RestService\SubstrateNET.RestService.csproj", "{52087BA9-96C5-41A6-8A1F-624A3DD180BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstrateNET.NetApi", "SubstrateNET\SubstrateNET.NetApi\SubstrateNET.NetApi.csproj", "{FC03D750-AE89-40E3-951A-4F2B90787541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstrateNET.RestClient", "SubstrateNET\SubstrateNET.RestClient\SubstrateNET.RestClient.csproj", "{66635627-3402-4824-A870-28D7906BE58F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ajuna.SubstrateSeminarDemos.Console", "Ajuna.SubstrateSeminarDemos.Console\Ajuna.SubstrateSeminarDemos.Console.csproj", "{DF38AB36-D460-4C2F-9E9B-D1FC3EDEDF05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52087BA9-96C5-41A6-8A1F-624A3DD180BF} = {899D3496-CE8A-40C7-973F-A7E79E021D10}
+		{FC03D750-AE89-40E3-951A-4F2B90787541} = {899D3496-CE8A-40C7-973F-A7E79E021D10}
+		{66635627-3402-4824-A870-28D7906BE58F} = {899D3496-CE8A-40C7-973F-A7E79E021D10}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52087BA9-96C5-41A6-8A1F-624A3DD180BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52087BA9-96C5-41A6-8A1F-624A3DD180BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52087BA9-96C5-41A6-8A1F-624A3DD180BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52087BA9-96C5-41A6-8A1F-624A3DD180BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC03D750-AE89-40E3-951A-4F2B90787541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC03D750-AE89-40E3-951A-4F2B90787541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC03D750-AE89-40E3-951A-4F2B90787541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC03D750-AE89-40E3-951A-4F2B90787541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66635627-3402-4824-A870-28D7906BE58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66635627-3402-4824-A870-28D7906BE58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66635627-3402-4824-A870-28D7906BE58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66635627-3402-4824-A870-28D7906BE58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF38AB36-D460-4C2F-9E9B-D1FC3EDEDF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF38AB36-D460-4C2F-9E9B-D1FC3EDEDF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF38AB36-D460-4C2F-9E9B-D1FC3EDEDF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF38AB36-D460-4C2F-9E9B-D1FC3EDEDF05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
