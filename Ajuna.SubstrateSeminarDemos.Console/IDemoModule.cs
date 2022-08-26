@@ -1,6 +1,8 @@
+using Serilog;
+
 namespace Ajuna.SubstrateSeminarDemos.Console;
 
 public interface IDemoModule
 {
-    Task Execute();
+    Task ExecuteAsync(ILogger logger);
 }
