@@ -8,20 +8,15 @@ namespace Ajuna.SubstrateSeminarDemos.Console.Demos;
 /// <summary>
 /// Direct Polling for the Block Number
 /// </summary>
-public class BlockNumberDirectPolling: IDemoModule
+public class BlockNumberDirectPolling:  DemoModuleBase, IDemoModule
 {
     private static string NodeUrl = "ws://127.0.0.1:9944";
 
     public async Task ExecuteAsync(ILogger logger)
     {
         // Instantiate the client
-        var client = new SubstrateClientExt(new Uri(NodeUrl));
+        var client = await GetClientExtAndConnectAsync();
 
-        await client.ConnectAsync();
-           
-        // Display Client Connection Status after connecting
-        logger.Information( client.IsConnected ? "Client connected successfully" : "Failed to connect to node. Exiting...");
-            
         if (!client.IsConnected)
             return;
             
@@ -29,10 +24,8 @@ public class BlockNumberDirectPolling: IDemoModule
 
         while (true)
         {
-            string parameters = SystemStorage.NumberParams();
-            var num = await client.GetStorageAsync<NetApi.Model.Types.Primitive.U32>(parameters, new CancellationToken());                
-            logger.Information($"Block Number is: {num.Value}");
-
+            var scaleNum = await client.SystemStorage.Number(CancellationToken.None);
+            logger.Information("Block Number: {BlockNumber}", scaleNum.Value);
             Thread.Sleep(2000);
         }
     }

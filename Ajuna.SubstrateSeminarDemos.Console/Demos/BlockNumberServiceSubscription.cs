@@ -54,10 +54,7 @@ public class BlockNumberServiceSubscription: IDemoModule
         while (true)
         {
             await subscriptionClient.ReceiveNextAsync(CancellationToken.None);
-      }
-         
-        // Close Websocket Connection 
-       // await subscriptionClient.CloseAsync(WebSocketCloseStatus.Empty,"",CancellationToken.None);
+        }
     }
     
     private static void HandleChange(StorageChangeMessage message, ILogger logger)
